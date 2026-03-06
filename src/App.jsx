@@ -435,7 +435,7 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
         .tb:hover{background:#f0f7fb!important;color:#005587!important}
         .dr:hover{background:#f5f9fb!important}
         .msg{white-space:pre-wrap;line-height:1.65}
-        .st td,.st th{padding:5px 9px;font-family:Calibri,sans-serif;font-size:12px;border:1px solid #4F81BD;color:#1a1a2e}
+        .st td,.st th{padding:5px 9px;font-family:Calibri,sans-serif;font-size:12px;border:1px solid #4F81BD;color:#1a1a2e!important}
 
         .st th{background:#4F81BD;color:white;font-weight:600}
         .st tr:nth-child(even) td{background:#EBF1F8}
@@ -638,5 +638,6 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
     </div>
   );
 }
+
 
 

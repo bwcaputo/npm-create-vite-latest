@@ -426,7 +426,7 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
     <div style={{ fontFamily:"'Source Sans 3',Georgia,sans-serif", minHeight:"100vh", background:"#f0f4f8" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
-        *{box-sizing:border-box;margin:0;padding:0}
+        *{box-sizing:border-box;margin:0;padding:0;color-scheme:light}
         @keyframes spin{to{transform:rotate(360deg)}}
         @keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
         .fu{animation:fu .25s ease forwards}

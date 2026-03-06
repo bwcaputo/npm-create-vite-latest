@@ -509,7 +509,7 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
                   <div key={i} className="dr fu" style={{ background:"white", border:"1px solid #e0eaf4", borderRadius:7, padding:"9px 14px", display:"flex", alignItems:"center", gap:10 }}>
                     <div style={{ color:"#005587" }}>{Icons.doc}</div>
                     <div style={{ flex:1, minWidth:0 }}>
-                      <div style={{ fontFamily:"'Source Sans 3',sans-serif", fontWeight:600, fontSize:13, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{d.name}</div>
+                      <div style={{ fontFamily:"'Source Sans 3',sans-serif", fontWeight:600, fontSize:13, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", color:"#1a1a2e" }}>{d.name}</div>
                       <div style={{ fontFamily:"'Source Sans 3',sans-serif", fontSize:11, color:"#aaa" }}>{d.chunks.length} chunks · {(d.text.length/1000).toFixed(1)}k chars</div>
                     </div>
                     <button onClick={() => setDocs(p => p.filter((_,j) => j !== i))} style={{ background:"none", border:"none", cursor:"pointer", color:"#cc4444", opacity:.7, padding:4 }}>{Icons.trash}</button>
@@ -638,6 +638,7 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
     </div>
   );
 }
+
 
 
 

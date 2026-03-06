@@ -435,7 +435,8 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
         .tb:hover{background:#f0f7fb!important;color:#005587!important}
         .dr:hover{background:#f5f9fb!important}
         .msg{white-space:pre-wrap;line-height:1.65}
-        .st td,.st th{padding:5px 9px;font-family:Calibri,sans-serif;font-size:12px;border:1px solid #4F81BD}
+        .st td,.st th{padding:5px 9px;font-family:Calibri,sans-serif;font-size:12px;border:1px solid #4F81BD;color:#1a1a2e}
+
         .st th{background:#4F81BD;color:white;font-weight:600}
         .st tr:nth-child(even) td{background:#EBF1F8}
       `}</style>
@@ -579,7 +580,7 @@ DENVER HEALTH CANDIDATE LIFECYCLE REFERENCE:\n${CANVA_PROCESS_MAP}\n\nSOP DOCUME
                     </div>
                     <table style={{ width:"100%", borderCollapse:"collapse", marginBottom:12, fontSize:12 }}>
                       {[["Department",sop.department],["Job / Role",sop.jobRole],["Process Name",sop.processName],["Date Created",sop.dateCreated],["Author",sop.author],["Version",sop.version]].map(([k,v])=>(
-                        <tr key={k}><td style={{ background:"#8DB3E2", color:"white", padding:"4px 9px", fontWeight:600, border:"1px solid #4F81BD", width:115, fontFamily:"Calibri,sans-serif" }}>{k}</td><td style={{ padding:"4px 9px", border:"1px solid #4F81BD", fontFamily:"Calibri,sans-serif" }}>{v}</td></tr>
+                        <tr key={k}><td style={{ background:"#8DB3E2", color:"white", padding:"4px 9px", fontWeight:600, border:"1px solid #4F81BD", width:115, fontFamily:"Calibri,sans-serif" }}>{k}</td><td style={{ padding:"4px 9px", border:"1px solid #4F81BD", fontFamily:"Calibri,sans-serif", color:"#1a1a2e" }}>{v}</td></tr>
                       ))}
                     </table>
                     <div style={{ fontFamily:"Calibri,sans-serif", fontSize:12, color:"#555", marginBottom:10, fontStyle:"italic" }}>{sop.overview}</div>

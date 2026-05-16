@@ -1,16 +1,40 @@
-# React + Vite
+# SWP Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-powered drafting and revision tool for Standard Work Procedures (SWPs). Built as a prototype to help clinical staff turn rough operational notes into formatted SWPs, and to revise existing procedures faster.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A clinician describes a process in plain language. The tool drafts a formatted SWP with sections, numbered steps, role assignments, and exception handling. The clinician edits in the browser; the tool revises against the edits and produces a final document.
 
-## React Compiler
+The model runs against OpenAI's GPT API. A serverless proxy on Vercel holds the API key; the browser never sees it.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+React + Vite frontend. Vercel serverless function (`api/chat`) as the GPT proxy. ESLint for code style.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+
+```bash
+git clone https://github.com/bwcaputo/npm-create-vite-latest.git
+cd npm-create-vite-latest
+npm install
+
+# Create .env.local (gitignored) with your OpenAI API key:
+# OPENAI_API_KEY=sk-...
+
+npm run dev
+```
+
+The Vite dev server runs at http://localhost:5173. The serverless proxy is invoked at `/api/chat`.
+
+## Deployment
+
+The production app is deployed at [npm-create-vite-latest.vercel.app](https://npm-create-vite-latest.vercel.app). Push to `main` triggers a Vercel deploy. Set `OPENAI_API_KEY` as a Vercel project environment variable.
+
+## Origin
+
+Built as part of a DU MBA social good project working with a metropolitan health system on clinical workflow automation.
+
+## License
+
+[MIT](LICENSE)
